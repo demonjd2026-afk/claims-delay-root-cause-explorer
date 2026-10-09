@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claims Delay Root-Cause Explorer</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+  <div class="shell">
+    <aside class="side">
+      <div class="brand">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <rect x="1" y="13" width="6" height="6" rx="1.5" fill="#2a78d6"/><rect x="9" y="13" width="6" height="6" rx="1.5" fill="#eb6834"/>
+          <rect x="17" y="13" width="6" height="6" rx="1.5" fill="#1baf7a"/><rect x="25" y="13" width="6" height="6" rx="1.5" fill="#eda100"/>
+          <path d="M12 8v4M12 20v4" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <div><strong>Claims Delay</strong><span>Root-Cause Explorer</span></div>
+      </div>
+      <nav id="nav" aria-label="Sections"></nav>
+      <p class="side-note" id="side-note"></p>
+    </aside>
+
+    <div class="main">
+      <header class="top">
+        <div class="top-title">
+          <h1 id="page-title"></h1>
+          <p id="page-lede"></p>
+        </div>
+        <form class="filters" id="filters" aria-label="Filters">
+          <label>From<input type="date" name="date_from"></label>
+          <label>To<input type="date" name="date_to"></label>
+          <label>Line of business<select name="lob"><option value="">All</option></select></label>
+          <label>Platform<select name="platform"><option value="">All</option></select></label>
+          <button type="reset" class="btn ghost">Reset</button>
+        </form>
+      </header>
+      <main id="view" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Claim detail" hidden></aside>
+  <div class="tip" id="tip" hidden></div>
+
+  <script src="/vendor/chart.umd.js"></script>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
